@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Royal Bike Showroom</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+    header {
+      background-color: #000;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+      font-family: 'Orbitron', sans-serif;
+    }
+    nav {
+      background-color: #1a1a1a;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 15px 0;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    nav a:hover {
+      color: #ffcc00;
+    }
+    .hero {
+  background: url('images/banner.jpg') no-repeat center center;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 40px;
+  color: white;
+  text-align: center;
+  text-shadow: 3px 3px 5px #000;
+  position: relative;
+}
+
+
+    .hero h1 {
+      font-size: 3.5rem;
+    }
+    .section-title {
+      text-align: center;
+      margin: 40px 0 20px;
+      font-size: 2.5rem;
+      color: #000;
+    }
+    .bikes {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      padding: 20px;
+    }
+    .bike-card {
+      width: 300px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      overflow: hidden;
+      transition: transform 0.3s;
+    }
+    .bike-card:hover {
+      transform: scale(1.05);
+    }
+    .bike-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    .bike-card .info {
+      padding: 15px;
+    }
+    .bike-card h3 {
+      margin-bottom: 10px;
+      color: #000;
+    }
+    .bike-card p {
+      font-weight: bold;
+      color: #555;
+    }
+
+    .features {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 20px;
+      gap: 40px;
+      background: #fff;
+    }
+    .feature-box {
+      width: 250px;
+      text-align: center;
+    }
+    .feature-box i {
+      font-size: 40px;
+      color: #ff6600;
+      margin-bottom: 15px;
+    }
+    .feature-box h4 {
+      margin-bottom: 10px;
+    }
+
+    .reviews {
+      background: #f1f1f1;
+      padding: 40px 20px;
+      text-align: center;
+    }
+    .review {
+      max-width: 600px;
+      margin: 20px auto;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    }
+
+    .contact {
+      background: #333;
+      color: white;
+      padding: 40px 20px;
+    }
+    .contact form {
+      max-width: 500px;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+    }
+    .contact input, .contact textarea {
+      padding: 12px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 5px;
+    }
+    .contact button {
+      background: #ff6600;
+      color: white;
+      padding: 12px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .contact button:hover {
+      background: #e65c00;
+    }
+
+    footer {
+      background: #111;
+      color: white;
+      text-align: center;
+      padding: 15px;
+    }
+
+    @media (max-width: 768px) {
+      .bikes, .features {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>ROYAL BIKE SHOWROOM</h1>
+    <p>Unleash the Power. Rule the Roads.</p>
+  </header>
+
+  <nav>
+    <a href="#">Home</a>
+    <a href="#bikes">Bikes</a>
+    <a href="#features">Features</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section class="hero">
+    <h1>Ride Like Royalty</h1>
+  </section>
+
+  <h2 class="section-title" id="bikes">Our Featured Bikes</h2>
+  <section class="bikes" id="bikeList"></section>
+
+  <h2 class="section-title" id="features">Why Choose Us</h2>
+  <section class="features">
+    <div class="feature-box">
+      <i>🏍️</i>
+      <h4>Premium Models</h4>
+      <p>Only the best handpicked bikes from Royal Enfield.</p>
+    </div>
+    <div class="feature-box">
+      <i>🛠️</i>
+      <h4>Expert Service</h4>
+      <p>Certified technicians for complete peace of mind.</p>
+    </div>
+    <div class="feature-box">
+      <i>📞</i>
+      <h4>24x7 Support</h4>
+      <p>Get help anytime with our 24/7 customer support.</p>
+    </div>
+    <div class="feature-box">
+      <i>🎁</i>
+      <h4>Exciting Offers</h4>
+      <p>Unmatched seasonal deals and discounts.</p>
+    </div>
+  </section>
+
+  <h2 class="section-title" id="reviews">What Our Riders Say</h2>
+  <section class="reviews">
+    <div class="review">
+      <p>"Absolutely love my new Classic 350. The service was amazing and the bike is a beast on the roads!"</p>
+      <strong>– Rahul Kumar</strong>
+    </div>
+    <div class="review">
+      <p>"A premium experience from test ride to delivery. Highly recommended!"</p>
+      <strong>– Sneha Mehta</strong>
+    </div>
+  </section>
+
+  <h2 class="section-title" id="contact">Get in Touch</h2>
+  <section class="contact">
+    <form>
+      <input type="text" placeholder="Your Name" required/>
+      <input type="email" placeholder="Your Email" required/>
+      <textarea rows="4" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Royal Bike Showroom. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Dynamic Bike Cards
+    const bikes = [
+      { name: "Royal Enfield Classic 350", price: "₹1.9 Lakh", image: "images/classic350.jpg" },
+      { name: "Royal Enfield Meteor 350", price: "₹2.1 Lakh", image: "images/meteor350.jpg" },
+      { name: "Royal Enfield Bullet 350", price: "₹1.8 Lakh", image: "images/bullet350.jpg" },
+      { name: "Royal Enfield Hunter 350", price: "₹1.5 Lakh", image: "images/hunter350.jpg" }
+    ];
+
+    const bikeList = document.getElementById("bikeList");
+
+    bikes.forEach(bike => {
+      const card = `
+        <div class="bike-card">
+          <img src="${bike.image}" alt="${bike.name}">
+          <div class="info">
+            <h3>${bike.name}</h3>
+            <p>Price: ${bike.price}</p>
+          </div>
+        </div>
+      `;
+      bikeList.innerHTML += card;
+    });
+  </script>
+</body>
+</html>
